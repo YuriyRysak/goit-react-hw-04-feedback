@@ -35,5 +35,5 @@ Statistics.prototype = {
   neutral: PropTypes.number,
   bad: PropTypes.number,
   total: PropTypes.number,
-  positive: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  positivePercentage: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };

@@ -2,17 +2,16 @@ import PropTypes from 'prop-types';
 import './FeedbackOptions.module.css';
 
 export const FeedbackOptions = ({ options, onHandleIncrement }) => {
-  const stateArr = Object.keys(options);
-  // console.log(stateArr);
+ 
 
   return (
     <div>
-      {stateArr.map(option => (
+      {options.map(option => (
         <button
           key={option}
           type="button"
           name={option}
-          onClick={() => onHandleIncrement(option)}
+          onClick={onHandleIncrement}
         >
           {option}
         </button>
@@ -22,6 +21,6 @@ export const FeedbackOptions = ({ options, onHandleIncrement }) => {
 };
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.object,
-  onLeaveFeedback: PropTypes.func,
+  options: PropTypes.array,
+  onHandleIncrement: PropTypes.func,
 };
